@@ -1,0 +1,520 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #161616;
+    color: #fff;
+    position: relative;
+    z-index: 1000; 
+    
+}
+
+/* Logo Styles */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .logoicon {
+    width: 50px;
+    height: auto; 
+    margin-right: 10px; 
+    padding-bottom: 10px;
+  }
+  
+  #logo{
+    font-size: 27px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:bold;
+    padding-bottom: 13px;
+    
+  }
+  
+  .greeting {
+    position: relative;
+    top: -15px;
+    left: 4px;
+    color: #319e4c; /* adjust this value as desired */
+  }
+  
+  /* Navigation Styles */
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #319e4c; 
+  }
+  
+  .login-icon {
+    width: 30px;      /* or any suitable width */
+    height: auto;     /* or any suitable height */
+    position: relative;
+    top: -7px;
+  
+  }
+  
+  .account-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #333;
+    min-width: 150px;
+    z-index: 1;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .account-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  .hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    
+  }
+  
+  .hamburger img{
+    width: 32px;
+    
+  }
+
+  .search-icon {
+    display: inline-block;
+    position: relative; 
+    top: -3px;
+  }
+  
+  .search-icon img {
+  width: 24px;     
+    height: auto; 
+    cursor: pointer;
+  }
+  
+  .cart-icon {
+    display: inline-block;
+    position: relative; 
+    top: -7px;
+  }
+  
+  .cart-icon img {
+  width: 30px;     
+    height: auto; 
+    cursor: pointer;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -8px; 
+    right: -8px; 
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  /* Style for the cart dropdown */
+  
+  .cart-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(52, 52, 52);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  /* Style for the cart items list */
+  
+  #cart-items-list {
+    list-style: none;
+    display: block; 
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  #cart-items-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  #cart-items-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Additional styling for item name and price */
+  
+  #cart-items-list li span {
+    display: block; 
+  }
+  
+  #cart-items-list li span:first-child {
+    font-weight: bold;
+    color: white;
+  }
+  
+  #cart-items-list li span:last-child {
+    color: white;
+  }
+  
+  /* Style for the "Go to Checkout" option */
+  
+  #cart-items-list a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    background-color: green; 
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #cart-items-list a:hover {
+    background-color: #2980b9; 
+  }
+
+
+  #profileContent {
+    position: relative;
+    top: -50px;
+    background-color: rgba(52, 52, 52, 0.466);;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 5% 200px 0% auto;  /* Top, Right, Bottom, Left */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+#profileContent h2 {
+    margin: 0;
+    text-align: center;
+   
+}
+
+#profileContent p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+strong {
+    color: white;
+}
+
+#profileContent a {
+    text-decoration: none;
+    background-color: #007BFF;
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#profileContent a:hover {
+    background-color: #0056b3;
+}
+
+.profile-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%; /* Adjust as necessary */
+}
+
+.features-container {
+    width: 20%; /* Adjust as necessary */
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(52, 52, 52, 0.466);
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.features-container a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.features-container a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.change-password-container {
+    position: relative;
+    top: -50px;
+    margin: 5% 275px 0% auto;  /* Top, Right, Bottom, Left */
+    width: 30%; 
+    background-color: rgba(52, 52, 52, 0.466);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.change-password-container .input-group {
+    width: 100%;
+    padding-right: 50px;
+    margin-bottom: 15px;
+    
+}
+
+.change-password-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.change-password-container input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+}
+
+.change-password-container button {
+    padding: 10px 20px;
+    background-color: #444;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-password-container button:hover {
+    background-color: #555;
+}
+
+
+#reservationsContainer table {
+    position: relative;
+    margin: 5% 250px 0% auto;  /* Top, Right, Bottom, Left */
+    width: 500px;
+    border-collapse: collapse;
+}
+
+#reservationsContainer th, #reservationsContainer td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#reservationsContainer tr:nth-child(even) {
+    background-color: #4f4e4e;
+    color: white;
+}
+
+#reservationsContainer tr:nth-child(odd) {
+  background-color: #353836;
+  color: white;
+}
+
+
+
+#reservationsContainer th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1f401f;
+    color: white;
+}
+
+
+  /*Contact Form And Other Details */
+
+
+footer {
+    
+    padding-top: 50px;
+    padding-left: 105px;
+    padding-right: 100px; 
+    margin: auto;
+    color: white;
+   
+  }
+
+ #morelabel{ 
+  color: white;
+  padding-left: 0px;
+  border: solid 1px #989696;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 25px;
+ }
+
+  #more-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust this based on your layout */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    flex: 1;
+    margin: 0 15px;  /* Some spacing between the cards */
+    text-align: center;
+    padding-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(52, 52, 52, 0.466);
+    transition: transform 0.3s ease; /* This will make the zoom effect smooth */
+    
+}
+.info-card:hover {
+  transform: scale(1.05); /* Adjust the scale value as needed */
+  background-color: #3a3a3aca;
+}
+
+.info-card img {
+    max-width: 50px;
+    height: auto;
+    padding-top: 20px;
+}
+
+.info-card h3 {
+    margin-top: 15px;
+}
+
+.info-card p {
+    padding: 10px;
+}
+
+.info-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.info-card button:hover {
+    background-color: #555;
+}
+
+
+  .branches{
+   padding-top: 25px;
+   border: 1px solid #ccc;
+   border-left: 0px;
+   border-right: 0px;
+   border-bottom: 0px;
+   
+
+  }
+  .branch-locations {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .branches img{
+    padding-bottom: 15px;
+  }
+
+  .branch {
+    margin-bottom: 20px;
+  }
+  
+  .branch h4 {
+    margin-top: 0;
+  }
+  
+
+  #faq h4 {
+    text-align: center;
+    font-size: smaller;
+  }
+  
+  #faq {
+    clear: both;
+    margin-top: 20px;
+  }
+  
+  .main-branch {
+    order: 0;
+  }
+  
+  .other-branch {
+    order: 1;
+  }
